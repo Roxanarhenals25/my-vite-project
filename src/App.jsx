@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Characters from './components/Characters';
 
 
-
 function App() {
   const [characters, setCharacters] = useState(null);
 
@@ -23,11 +22,11 @@ function App() {
       <header className='App-header'>
         <h1 className='title'> Rick & Morty </h1>
         { characters ? (
-          <Characters characters={characters}/> 
+          <Characters characters={characters} setCharacters={setCharacters}/> 
         ) : (
           <>
           <img src={imageRickMorty} alt="Rick & Morty" className='img-home' />
-          <button onClick={reqApi} className='btn-search'> search characters </button>
+          <button onClick={reqApi} className='btn-search'> Search Characters </button>
           </>
         ) }
       </header>

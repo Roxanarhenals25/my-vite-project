@@ -2,9 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 function Characters(props) {
-    const {characters} = props;
+    const {characters, setCharacters} = props;
 
-    console.log(characters);
+    const resetCharacter = () => {
+        setCharacters(null);
+    };
 
 return (
     <div className='characters'>
@@ -42,7 +44,7 @@ return (
                 </div>
             ))}
         </div>
-        <span className='back-home'> Back Home </span>
+        <span className='back-home' onClick={resetCharacter}> Back Home </span>
     </div>
 )
 }
