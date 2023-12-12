@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Characters from './components/Characters';
 
 
-function App() {
+export default function App() {
   const [characters, setCharacters] = useState(null);
 
   const reqApi = async () => {
@@ -34,4 +34,3 @@ function App() {
   );
 }
 
-export default App
